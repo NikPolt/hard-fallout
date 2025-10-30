@@ -1,0 +1,27 @@
+# Biological and conditioning traits
+- type: trait
+  id: ConnectionWaitList
+  category: Physical
+  points: -5
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14ScriptedDeath
+        - N14LifeTaker
+        - N14LifeGiver
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: DeadModifier
+          deadThresholdModifier: 100
+
+- type: trait
+  id: ConnectionExtraFood
+  category: Physical
+  points: -1
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Hunger
+          currentHunger: 200

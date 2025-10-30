@@ -17,6 +17,11 @@
   id: N14Pickpocket
   category: Mental
   points: -6
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ConnectionSlowHands
   functions:
     - !type:TraitReplaceComponent
       components:

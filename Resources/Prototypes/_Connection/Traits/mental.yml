@@ -1,0 +1,16 @@
+- type: trait
+  id: ConnectionSlowHands
+  name: Неторопливый
+  description: По каким-то причинам вы медленно стаскиваете вещи в сущностей, боитесь пораниться?
+  category: Mental
+  points: 2
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14Pickpocket
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Thieving
+          stripTimeMultiplier: 2
