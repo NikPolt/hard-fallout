@@ -21,7 +21,7 @@
   #Connection Edit
   - !type:AgeRequirement
     min: 35
-    max: 120
+    max: 200
   #Connection Edit End
   startingGear: CaesarLegionCenturionGear
   alwaysUseSpawner: true

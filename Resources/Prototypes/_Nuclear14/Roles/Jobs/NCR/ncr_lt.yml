@@ -20,7 +20,7 @@
     #Connection Edit
     - !type:AgeRequirement
       min: 28
-      max: 120
+      max: 200
     #Connection Edit End
   weight: 10
   startingGear: NCRLTGear

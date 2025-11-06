@@ -18,7 +18,7 @@
     #Connection Edit
     - !type:AgeRequirement
       min: 30
-      max: 120
+      max: 200
     #Connection Edit End
   startingGear: NCRRangerGear
   icon: "JobIconNcrRanger" # Corvax-Change

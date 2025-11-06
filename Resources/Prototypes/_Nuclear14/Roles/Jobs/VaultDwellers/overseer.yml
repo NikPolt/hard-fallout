@@ -12,7 +12,7 @@
   #Connection Edit
   - !type:AgeRequirement
       min: 30
-      max: 120
+      max: 200
   #Connection Edit End
   playTimeTracker: Overseer
   weight: 20
