@@ -40,11 +40,12 @@
   id: ConnectionLastBreath
   category: Physical
   points: -4
-  functions:
+  requirements:
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
         - N14LifeTaker
+  functions:
     - !type:TraitReplaceComponent
       components:
         - type: SlowOnDamage
@@ -76,7 +77,7 @@
   id: ConnectionHookHands
   category: Physical
   points: -8
-  functions:
+  requirements:
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
@@ -88,6 +89,7 @@
         - N14RadClaws
         - N14IronFist
         - N14PillowKnuckles
+  functions:
     - !type:TraitAddComponent
       components:
         - type: MeleeThrowOnHit

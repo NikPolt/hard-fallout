@@ -264,11 +264,12 @@
   id: N14WorldChampion
   category: Physical
   points: -6 #Make super mutants unable to take this when they get added
-  functions:
+  requirements:
     - !type:CharacterTraitRequirement
       inverted: true
       traits:
         - ConnectionHookHands #Connection
+  functions:
     - !type:TraitAddComponent
       components:
         - type: MeleeThrowOnHit
