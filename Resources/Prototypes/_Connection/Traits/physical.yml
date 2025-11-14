@@ -1,0 +1,100 @@
+# Biological and conditioning traits
+- type: trait
+  id: ConnectionWaitList
+  category: Physical
+  points: -5
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14ScriptedDeath
+        - N14LifeTaker
+        - N14LifeGiver
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: DeadModifier
+          deadThresholdModifier: 100
+
+- type: trait
+  id: ConnectionExtraFood
+  category: Physical
+  points: -3
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Hunger
+          baseDecayRate: 0.004
+
+- type: trait
+  id: ConnectionExtraWater
+  category: Physical
+  points: -3
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Thirst
+          baseDecayRate: 0.05
+
+- type: trait
+  id: ConnectionLastBreath
+  category: Physical
+  points: -4
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14LifeTaker
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: SlowOnDamage
+          speedModifierThresholds:
+            60: 0.75
+            80: 0.55
+            90: 1
+
+- type: trait
+  id: ConnectionCrawlingExercises
+  category: Physical
+  points: -3
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: LayingDown
+          lyingSpeedModifier: 0.3
+
+- type: trait
+  id: ConnectionNoSlipLegs
+  category: Physical
+  points: -10
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: NoSlip
+
+- type: trait
+  id: ConnectionHookHands
+  category: Physical
+  points: -8
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14BadReflexes
+        - N14WorldChampion
+        - N14LightningHands
+        - N14Blitz
+        - N14ShortArms
+        - N14RadClaws
+        - N14IronFist
+        - N14PillowKnuckles
+  functions:
+    - !type:TraitAddComponent
+      components:
+        - type: MeleeThrowOnHit
+          lifetime: 0.5
+          speed: -15
+    - !type:TraitModifyUnarmed
+      attackRateModifier: 3
+      rangeModifier: 10
