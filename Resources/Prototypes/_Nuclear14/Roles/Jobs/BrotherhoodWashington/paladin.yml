@@ -13,6 +13,11 @@
     - !type:CharacterDepartmentTimeRequirement
       department: BrotherhoodWashington
       min: 54000 # 15 hours
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 25
+      max: 200
+    #Connection Edit End
   startingGear: BoSWashingtonPaladinGear
   alwaysUseSpawner: true
   icon: "JobIconPassenger"

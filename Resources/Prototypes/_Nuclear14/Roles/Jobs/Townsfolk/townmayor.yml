@@ -14,6 +14,11 @@
     - !type:CharacterDepartmentTimeRequirement
       department: Townsfolk
       min: 36000 # 10 hours
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 35
+      max: 200
+    #Connection Edit End
   startingGear: TownMayorGear
   icon: "JobIconTownMayor" # Corvax-Change
   supervisors: job-supervisors-townsfolk

@@ -13,6 +13,11 @@
       - Ghoul
     - !type:CharacterOverallTimeRequirement
       min: 3600
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 16
+      max: 20
+    #Connection Edit End
   startingGear: NCRCadetGear
   icon: "JobIconNcrCadet" # Corvax-Change
   supervisors: job-supervisors-ncr

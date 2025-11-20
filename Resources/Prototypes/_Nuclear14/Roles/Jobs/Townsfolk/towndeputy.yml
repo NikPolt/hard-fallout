@@ -14,6 +14,11 @@
     - !type:CharacterDepartmentTimeRequirement
       department: Townsfolk
       min: 14400 # 4 hours
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 20
+      max: 200
+    #Connection Edit End
   startingGear: TownDeputyGear
   icon: "JobIconTownDeputy" # Forge-Change
   supervisors: job-supervisors-townsfolk

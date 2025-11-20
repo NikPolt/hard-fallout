@@ -10,6 +10,11 @@
   - !type:CharacterDepartmentTimeRequirement
     department: Vault
     min: 18000 # 5 hours
+  #Connection Edit
+  - !type:AgeRequirement
+      min: 20
+      max: 60
+  #Connection Edit End
   setPreference: true
   overrideConsoleVisibility: true
   canBeAntag: false

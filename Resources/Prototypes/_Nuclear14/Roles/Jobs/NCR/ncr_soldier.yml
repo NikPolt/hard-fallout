@@ -14,6 +14,11 @@
     - !type:CharacterDepartmentTimeRequirement
       department: NCR
       min: 10800 # 3 hours Corvax-Change
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 18
+      max: 200
+    #Connection Edit End
   startingGear: NCRSoldierGear
   icon: "JobIconNcrSoldier" # Corvax-Change
   supervisors: job-supervisors-ncr

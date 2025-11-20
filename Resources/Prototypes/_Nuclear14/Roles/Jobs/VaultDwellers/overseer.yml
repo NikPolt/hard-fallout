@@ -9,6 +9,11 @@
   - !type:CharacterDepartmentTimeRequirement
     department: Vault
     min: 36000 # 10 hours
+  #Connection Edit
+  - !type:AgeRequirement
+      min: 30
+      max: 200
+  #Connection Edit End
   playTimeTracker: Overseer
   weight: 20
   startingGear: OverseerGear

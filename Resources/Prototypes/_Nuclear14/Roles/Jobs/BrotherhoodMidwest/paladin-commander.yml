@@ -22,6 +22,11 @@
           species:
             - Human
             - Ghoul
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 35
+      max: 200
+    #Connection Edit End
   startingGear: BoSMidPaladinCommanderGear
   alwaysUseSpawner: true
   icon: "JobIconBosMCommander" # Corvax-Change

@@ -15,6 +15,11 @@
       tracker: NCRRanger
       min: 216000 # 60 hours as NCR
     - !type:CharacterWhitelistRequirement
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 25
+      max: 200
+    #Connection Edit End
   startingGear: NCRRangerVeteranGear
   icon: "JobIconNcrVeteranRanger" # Corvax-Change
   supervisors: ent-job-supervisors-ncr # Corvax-Change

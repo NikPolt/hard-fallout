@@ -17,6 +17,11 @@
     - !type:CharacterPlaytimeRequirement # Corvax-Add
       tracker: TownDeputy
       min: 14400 # 4 hours
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 25
+      max: 200
+    #Connection Edit End
   startingGear: TownSheriffGear
   icon: "JobIconTownSheriff" # Corvax-Change
   supervisors: job-supervisors-townsfolk

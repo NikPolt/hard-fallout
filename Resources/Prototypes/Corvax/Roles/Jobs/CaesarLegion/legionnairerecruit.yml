@@ -14,6 +14,11 @@
     gender: Male
   - !type:CharacterOverallTimeRequirement
     min: 3600 # 1 hour
+  #Connection Edit
+  - !type:AgeRequirement
+    min: 20
+    max: 200
+  #Connection Edit End
   startingGear: CaesarLegionLegionnaireRecruitGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerRecruit"
