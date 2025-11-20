@@ -14,6 +14,11 @@
     - !type:CharacterDepartmentTimeRequirement
       department: Tribe
       min: 14400 # 4 hours
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 50
+      max: 200
+    #Connection Edit End
   startingGear: TribalElderGear
   alwaysUseSpawner: true
   icon: "JobIconTribalLeader" # Corvax-Change

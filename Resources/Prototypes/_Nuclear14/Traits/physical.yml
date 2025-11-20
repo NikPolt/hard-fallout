@@ -9,6 +9,7 @@
       traits:
         - N14IronFist
         - N14RadClaws
+        - ConnectionHookHands #Connection
   functions:
     - !type:TraitModifyUnarmed
       flatDamageIncrease:
@@ -24,6 +25,7 @@
       inverted: true
       traits:
         - N14PillowKnuckles
+        - ConnectionHookHands #Connection
     - !type:CharacterSpeciesRequirement
       species:
         - Human
@@ -42,6 +44,7 @@
       inverted: true
       traits:
         - N14PillowKnuckles
+        - ConnectionHookHands #Connection
     - !type:CharacterSpeciesRequirement
       species:
         - Ghoul
@@ -92,6 +95,7 @@
       inverted: true
       traits:
         - N14Blitz
+        - ConnectionHookHands #Connection
   functions:
     - !type:TraitModifyUnarmed
       rangeModifier: 0.9
@@ -105,6 +109,7 @@
       inverted: true
       traits:
         - N14ShortArms
+        - ConnectionHookHands #Connection
   functions:
     - !type:TraitModifyUnarmed
       rangeModifier: 1.15
@@ -119,6 +124,7 @@
       traits:
         - N14LifeTaker
         - N14LifeGiver
+        - ConnectionWaitList #Connection
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -135,6 +141,8 @@
       traits:
         - N14ScriptedDeath
         - N14LifeGiver
+        - ConnectionWaitList #Connection
+        - ConnectionLastBreath #Connection
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -155,6 +163,7 @@
       traits:
         - N14ScriptedDeath
         - N14LifeTaker
+        - ConnectionWaitList #Connection
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -174,6 +183,7 @@
       inverted: true
       traits:
         - N14LightningHands
+        - ConnectionHookHands #Connection
     - !type:CharacterSpeciesRequirement
       species:
         - Human
@@ -191,6 +201,7 @@
       inverted: true
       traits:
         - N14BadReflexes
+        - ConnectionHookHands #Connection
     - !type:CharacterSpeciesRequirement
       species:
         - Human
@@ -253,6 +264,11 @@
   id: N14WorldChampion
   category: Physical
   points: -6 #Make super mutants unable to take this when they get added
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ConnectionHookHands #Connection
   functions:
     - !type:TraitAddComponent
       components:

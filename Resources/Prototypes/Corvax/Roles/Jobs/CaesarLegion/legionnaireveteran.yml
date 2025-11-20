@@ -15,6 +15,11 @@
     sex: Male
   - !type:CharacterGenderRequirement
     gender: Male
+  #Connection Edit
+  - !type:AgeRequirement
+    min: 20
+    max: 45
+  #Connection Edit End
   startingGear: CaesarLegionLegionnaireVeteranGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerVeteran"

@@ -20,6 +20,11 @@
           - Rangers
   requirements:
     - !type:CharacterWhitelistRequirement
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 18
+      max: 35
+    #Connection Edit End
 
 - type: startingGear
   id: RangerGear

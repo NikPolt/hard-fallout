@@ -14,6 +14,11 @@
     - !type:CharacterDepartmentTimeRequirement
       department: NCR
       min: 18000 # 5 hours
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 21
+      max: 200
+    #Connection Edit End
   startingGear: NCREngineerGear
   icon: "JobIconWarden"
   supervisors: job-supervisors-ncr

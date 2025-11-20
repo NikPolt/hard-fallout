@@ -17,6 +17,11 @@
     - !type:CharacterPlaytimeRequirement # Corvax-Add
       tracker: NCRSoldier
       min: 36000 # 10 hours
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 25
+      max: 200
+    #Connection Edit End
   startingGear: NCRSGTGear
   icon: "JobIconNcrSerg" # Corvax-Change
   supervisors: job-supervisors-ncr-sgt

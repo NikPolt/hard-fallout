@@ -18,6 +18,11 @@
     sex: Male
   - !type:CharacterGenderRequirement
     gender: Male
+  #Connection Edit
+  - !type:AgeRequirement
+    min: 25
+    max: 50
+  #Connection Edit End
   startingGear: CaesarLegionDeanGear
   alwaysUseSpawner: true
   icon: "JobIconlegionerDean"

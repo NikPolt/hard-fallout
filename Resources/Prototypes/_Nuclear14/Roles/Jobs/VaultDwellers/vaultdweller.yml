@@ -6,6 +6,11 @@
   - !type:CharacterSpeciesRequirement
     species:
     - Human
+  #Connection Edit
+  - !type:AgeRequirement
+      min: 18
+      max: 200
+  #Connection Edit End
   setPreference: true
   overrideConsoleVisibility: true
   canBeAntag: false

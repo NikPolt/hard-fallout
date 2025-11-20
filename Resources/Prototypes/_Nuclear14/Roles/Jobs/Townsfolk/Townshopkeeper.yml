@@ -17,6 +17,11 @@
     - !type:CharacterPlaytimeRequirement # Forge-Add
       tracker: TownShopkeeperHelper
       min: 14400 # 4 hours
+    #Connection Edit
+    - !type:AgeRequirement
+      min: 30
+      max: 200
+    #Connection Edit End
   startingGear: TownShopkeeperGear
   icon: "JobIconTownShopKeeper" # Corvax-Change
   supervisors: job-supervisors-townsfolk
