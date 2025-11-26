@@ -30,14 +30,14 @@
   - type: ThrowingAngle
     angle: 225
   - type: Reflect
-    reflectProb: 100
+    reflectProb: 1
     spread: 90
   - type: Item
     size: Normal
     sprite: Objects/Weapons/Melee/cuirassier_sabre.rsi
   - type: Tag
     tags:
-    - CuirassierSabre
+    - CaptainSabre
   - type: DisarmMalus
   - type: SentienceTarget
     flavorKind: station-event-random-sentience-flavor-inanimate
