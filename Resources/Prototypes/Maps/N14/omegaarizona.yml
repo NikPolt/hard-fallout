@@ -1,7 +1,7 @@
 - type: gameMap
   id: OmegaArizona
   mapName: 'Омега Аризона'
-  mapPath: /Maps/N14/OmegaArizona
+  mapPath: /Maps/N14/OmegaArizona.yml
   minPlayers: 0
   stations:
     OmegaArizona:
