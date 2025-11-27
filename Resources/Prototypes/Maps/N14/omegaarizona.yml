@@ -1,0 +1,44 @@
+- type: gameMap
+  id: OmegaArizona
+  mapName: 'Омега Аризона'
+  mapPath: /Maps/N14/OmegaArizona
+  minPlayers: 0
+  stations:
+    OmegaArizona:
+      stationProto: FalloutStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Омега Аризона'
+        - type: CP14StationAdditionalMap
+        - type: StationJobs
+          overflowJobs:
+            - Wastelander
+          availableJobs:
+            Wastelander: [ -1, -1 ]
+            # WastelandScavenger: [ 3, 5 ]
+            WastelandReporter: [ 1, 2 ]
+            # WastelandMusician: [ 2, 3 ]
+            WastelandFarmer: [ 2, 3 ]
+            WastelandChaplain: [ 1, 1 ]
+            WastelandBartender: [ 1, 2 ]
+            TribalElder: [ 1, 1 ]
+            Tribal: [ 2, 4 ]
+            TribalFarmer: [ 1, 2 ]
+            TribalHealer: [ 1, 2 ]
+            TownMayor: [ 1, 1 ]
+            TownSheriff: [ 1, 1 ]
+            TownDeputy: [ 1, 2 ]
+            TownDoctor: [ 1, 1 ]
+            TownMechanic: [ 2, 2 ]
+            TownShopkeeper: [ 2, 2 ]
+            Townsperson: [ 5, 5 ]
+            NCRRangerVeteran: [ 2, 2 ]
+#            CaravanLeader: [ 1, 1 ]
+#            CaravanTrader: [ 1, 1 ]
+#            CaravanGuard: [ 2, 2 ]
+#             BoSWashingtonCommander: [ 1, 0 ]
+            # BoSWashingtonPaladin: [ 1, 0 ]
+            # BoSWashingtonScribe: [ 2, 0 ]
+            # BoSWashingtonKnight: [ 2, 2 ]
+            # BoSWashingtonInitiate: [ 0, 2 ]
+            Overseer: [ 1, 1 ]
