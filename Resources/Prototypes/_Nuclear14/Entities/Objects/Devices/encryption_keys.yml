@@ -89,7 +89,7 @@
     - state: crypt_gray
     - state: com_label
 
-    type: entity
+- type: entity
   parent: EncryptionKey
   id: EncryptionKeyChina
   name: China encryption key
