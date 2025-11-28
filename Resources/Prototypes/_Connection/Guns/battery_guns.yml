@@ -1,0 +1,100 @@
+- type: hitscan
+  id: ConnectionLaserPlus
+  damage:
+    types:
+      Heat: 22 # Forge-Change
+  muzzleFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: muzzle_blue
+  travelFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: beam_blue
+  impactFlash:
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    state: impact_blue
+
+- type: entity
+  name: Ядерный блок плюс
+  description: Модернизированный вариант базовой батареи Гатлинг-лазера для использования в продвинутом энергическом оружии.
+  id: ConnectionPowerCellFusionBbs
+  suffix: Full
+  parent: N14BasePowerCell
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Objects/Weapons/Guns/Ammunition/Battery/fusion.rsi
+    layers:
+      - map: [ "enum.PowerCellVisualLayers.Base" ]
+        state: empty
+      - map: [ "enum.PowerCellVisualLayers.Unshaded" ]
+        state: o2
+        shader: unshaded
+  - type: Tag
+    tags:
+      - ConnectionPowerCellFusionBbs
+      - N14AmmoCell
+  - type: Battery
+    maxCharge: 5000
+    startingCharge: 5000
+  - type: Item
+    size: Normal
+  - type: HitscanBatteryAmmoProvider
+    proto: ConnectionLaserPlus
+    fireCost: 75
+
+- type: entity
+  name: Модернизированный гатлинг-лазер Деструктур
+  parent: N14BaseWeaponPowerCellMedium
+  id: VorsisWeaponLaserGatling
+  description: Изначально махина была призвана полностью заменить стандартные модели довоенного гатлинг-лазера. Представляет из себя сочетание точности и мощности в ущерб скорострельности.
+  components:
+  - type: Sprite
+    sprite: _Vorsis/laser_gatling_Bbs.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _Vorsis/laser_gatling_Bbs.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Item
+    size: Ginormous
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ConnectionPowerCellFusionBbs
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+            - ConnectionPowerCellFusionBbs
+  - type: Gun
+    minAngle: 4 #2
+    maxAngle: 18 #12
+    angleIncrease: 3 #4
+    angleDecay: 18 #12
+    fireRate: 6 #8
+    soundGunshot:
+      collection: N14LaserGatlingGunshot
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+  - type: Appearance
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0.7 #0.9
+    sprintModifier: 0.7 #0.9
+  - type: HeldSpeedModifier
+  - type: FollowDistance
+    backStrength: 6
+  - type: StaticPrice
+    price: 400
