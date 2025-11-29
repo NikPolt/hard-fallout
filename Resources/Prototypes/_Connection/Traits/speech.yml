@@ -1,0 +1,10 @@
+- type: trait
+  id: LanguageRobot
+  category: Speech
+  points: -2
+  functions:
+  - !type:TraitModifyLanguages
+    languagesSpoken:
+    - N14Robot
+    languagesUnderstood:
+    - N14Robot

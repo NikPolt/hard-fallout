@@ -125,6 +125,7 @@
         - N14LifeTaker
         - N14LifeGiver
         - ConnectionWaitList #Connection
+        - ConnectionGlassCannon #Connection
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -143,6 +144,7 @@
         - N14LifeGiver
         - ConnectionWaitList #Connection
         - ConnectionLastBreath #Connection
+        - ConnectionGlassCannon #Connection
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -286,6 +288,7 @@
       inverted: true
       traits:
         - N14MovingAsset
+        - ConnectionGlassCannon #Connection
   functions:
     - !type:TraitAddComponent
       components:
@@ -303,6 +306,7 @@
       inverted: true
       traits:
         - N14SittingDuck
+        - ConnectionGlassCannon #Connection
   functions:
     - !type:TraitAddComponent
       components:

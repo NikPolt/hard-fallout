@@ -14,3 +14,25 @@
       components:
         - type: Thieving
           stripTimeMultiplier: 2
+
+- type: trait
+  id: ConnectionCPRTrainingPlus
+  category: Mental
+  points: -5
+  requirements:
+    - !type:CharacterJobRequirement
+      inverted: false
+      jobs:
+        - TribalHealer
+        - TownDoctor
+        - NCRMedic
+        - BoSWashingtonScribe
+        - BoSMidScribe
+        - VaultDoctor
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: CPRTraining
+          doAfterDuration: 2
+          resuscitationChance: 0.25
+          rotReductionMultiplier: 0.02

@@ -10,6 +10,7 @@
         - N14ScriptedDeath
         - N14LifeTaker
         - N14LifeGiver
+        - ConnectionGlassCannon
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -20,6 +21,11 @@
   id: ConnectionExtraFood
   category: Physical
   points: -3
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ConnectionNeedFood
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -30,6 +36,11 @@
   id: ConnectionExtraWater
   category: Physical
   points: -3
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ConnectionNeedWater
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -45,6 +56,8 @@
       inverted: true
       traits:
         - N14LifeTaker
+        - ConnectionGlassCannon
+        - ConnectionAdrenaline
   functions:
     - !type:TraitReplaceComponent
       components:
@@ -67,7 +80,7 @@
 - type: trait
   id: ConnectionNoSlipLegs
   category: Physical
-  points: -10
+  points: -5
   functions:
     - !type:TraitAddComponent
       components:
@@ -98,3 +111,148 @@
     - !type:TraitModifyUnarmed
       attackRateModifier: 3
       rangeModifier: 10
+
+- type: trait
+  id: ConnectionGlassCannon
+  category: Physical
+  points: -5
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14ScriptedDeath
+        - N14LifeGiver
+        - N14SittingDuck
+        - N14MovingAsset
+        - ConnectionWaitList #Connection
+        - ConnectionLastBreath #Connection
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: CritModifier
+          critThresholdModifier: -50
+        - type: DeadModifier
+          deadThresholdModifier: -100
+        - type: SlowOnDamage
+          speedModifierThresholds:
+            30: 0.85
+            40: 0.7
+            45: 0.5
+    - !type:TraitAddComponent
+      components:
+        - type: TraitSpeedModifier
+          sprintModifier: 1.3
+          walkModifier: 1.3
+          requiredTriggeredSpeedModifier: 1.3
+
+- type: trait
+  id: ConnectionAdrenaline
+  category: Physical
+  points: -10
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14LifeTaker
+        - ConnectionGlassCannon
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: SlowOnDamage
+          speedModifierThresholds:
+            50: 1.1
+            60: 1.15
+            70: 1.2
+            80: 1.25
+            90: 1.3
+
+- type: trait
+  id: ConnectionWeakness
+  category: Physical
+  points: 4
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - N14LifeTaker
+        - ConnectionGlassCannon
+        - ConnectionAdrenaline
+        - ConnectionLastBreath
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: SlowOnDamage
+          speedModifierThresholds:
+            30: 0.9
+            40: 0.8
+            50: 0.7
+            60: 0.6
+            70: 0.5
+            80: 0.4
+            90: 0.35
+
+- type: trait
+  id: ConnectionNeedFood
+  category: Physical
+  points: 3
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ConnectionExtraFood
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Hunger
+          baseDecayRate: 0.012
+
+- type: trait
+  id: ConnectionNeedWater
+  category: Physical
+  points: 3
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ConnectionExtraWater
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Thirst
+          baseDecayRate: 0.15
+
+- type: trait
+  id: ConnectionExtraStamina
+  category: Physical
+  points: -2
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ConnectionNeedStamina
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Stamina
+          critThreshold: 150
+          slowdownMultiplier: 0.8
+          slowdownThresholdFactor: 0.4
+          stunTime: 5
+
+- type: trait
+  id: ConnectionNeedStamina
+  category: Physical
+  points: 2
+  requirements:
+    - !type:CharacterTraitRequirement
+      inverted: true
+      traits:
+        - ConnectionExtraStamina
+  functions:
+    - !type:TraitReplaceComponent
+      components:
+        - type: Stamina
+          critThreshold: 75
+          slowdownMultiplier: 0.7
+          slowdownThresholdFactor: 0.6
+          stunTime: 8
