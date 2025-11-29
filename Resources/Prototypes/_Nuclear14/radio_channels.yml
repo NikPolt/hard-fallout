@@ -84,7 +84,7 @@
 
 - type: radioChannel
   id: China
-  name: chat-radio-china
+  name: КНР
   keycode: 'и' # Corvax-Change
   frequency: 1945
   color: "#e61e10"
